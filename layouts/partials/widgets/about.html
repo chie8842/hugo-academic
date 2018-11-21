@@ -58,6 +58,19 @@
         </li>
         {{ end }}
       </ul>
+      <div>
+      {{ if $.Site.Params.Email }}
+      <i class="fas fa-envelope"></i>: {{ $.Site.Params.Email }}
+      {{ end }}
+      </div>
+<!--        {{ range $.Site.Params.organizations }}
+        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+          {{ with .url }}<a href="{{ . }}" target="_blank" itemprop="url" rel="noopener">{{ end }}
+          <span itemprop="name">{{ .name }}</span>
+          {{ if .url }}</a>{{ end }}
+        </h3>
+        {{ end }}
+-->
 
     </div>
   </div>
@@ -78,13 +91,13 @@
       </div>
       {{ end }}
 
-      {{ with $page.Params.education }}
+      {{ with $page.Params.career }}
       <div class="col-md-7">
-        <h3>{{ i18n "education" | markdownify }}</h3>
+        <h3>{{ i18n "career" | markdownify }}</h3>
         <ul class="ul-edu fa-ul">
           {{ range .courses }}
           <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
+            <i class="fa-li fas {{ .icon }}"></i>
             <div class="description">
               <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
               <p class="institution">{{ .institution }}</p>
