@@ -75,6 +75,9 @@
 - id: education
   translation: Education
 
+- id: career
+  translation: Career
+
 # Experience widget
 
 - id: present
