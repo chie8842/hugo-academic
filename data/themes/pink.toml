@@ -1,0 +1,20 @@
+# Theme metadata
+name = "Pink"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#ff69b4"
+primary_light = "#ffc0cb"
+primary_dark = "#d04f97"
+
+# Menu
+menu_primary = "#ff69b4" # 500
+menu_text = "#fff"
+menu_text_active = "#ff1493" # A100
+menu_title = "#fff"
+
+# Home sections
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(247, 247, 247)"
